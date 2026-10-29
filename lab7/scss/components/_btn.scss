@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+.btn {
+    @include flex-center(inline-flex);
+    padding: rem(12px) rem(22px);
+    border-radius: rem(30px);
+    font-weight: bold;
+    transition: transform var(--dur) var(--ease), box-shadow var(--dur);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px $btn-glow;
+    }
+
+    &--primary {
+        color: contrast(palette(brand));
+        background: linear-gradient(110deg, var(--brand), var(--brand-2));
+    }
+
+    &--outline {
+        color: $white;
+        border: 1px solid $outline-border;
+    }
+}

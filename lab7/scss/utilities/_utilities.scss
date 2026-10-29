@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+@each $name, $value in $palette {
+    .u-text-#{$name} {
+        color: var(--#{$name}) !important;
+    }
+
+    .u-bg-#{$name} {
+        background-color: var(--#{$name}) !important;
+    }
+}
+
+@each $key, $size in $spacers {
+    .u-mt-#{$key} {
+        margin-top: $size !important;
+    }
+
+    .u-mb-#{$key} {
+        margin-bottom: $size !important;
+    }
+
+    .u-p-#{$key} {
+        padding: $size !important;
+    }
+}
+
+.u-text-center {
+    text-align: center !important;
+}
+
+.u-visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}

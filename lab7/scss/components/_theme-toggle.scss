@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8px);
+    padding: rem(8px) rem(16px);
+    border: 1px solid $toggle-border;
+    border-radius: rem(25px);
+    background: transparent;
+    color: $white;
+    font-size: rem(14px);
+    cursor: pointer;
+    transition: background var(--dur), transform var(--dur) var(--ease);
+
+    &:hover {
+        background: var(--brand);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &__icon {
+        display: inline-block;
+        transition: transform 0.5s var(--ease);
+    }
+
+    &[aria-pressed="true"] &__icon {
+        transform: rotate(360deg);
+    }
+}

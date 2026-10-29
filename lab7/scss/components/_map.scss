@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.map {
+    @include container;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+
+    &__iframe {
+        display: block;
+        width: 100%;
+        height: rem(360px);
+        border: 0;
+    }
+
+    &__link {
+        @include container;
+        margin-top: rem(12px);
+    }
+
+    &__anchor {
+        color: var(--brand);
+        text-decoration: underline;
+    }
+}
+
+:root[data-theme="dark"] .map__anchor {
+    color: $link-dark;
+}

@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(4px);
+
+    &__link {
+        padding: rem(8px) rem(12px);
+        border-radius: rem(20px);
+        color: $nav-text;
+        font-size: rem(14px);
+        transition: background var(--dur), color var(--dur), transform var(--dur) var(--ease);
+
+        &:hover,
+        &:focus-visible,
+        &--active {
+            color: $white;
+            background: var(--brand);
+            transform: translateY(-2px);
+        }
+
+        &--preview {
+            color: $nav-preview;
+        }
+    }
+}

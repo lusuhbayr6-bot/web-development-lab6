@@ -1,0 +1,68 @@
+@use "../abstracts" as *;
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(28px);
+    padding-top: rem(48px);
+    padding-bottom: rem(48px);
+    @include gutter;
+    color: $white;
+    background:
+        radial-gradient(ellipse at 85% 20%, $hero-glow 0%, transparent 40%),
+        linear-gradient(125deg, $hero-from, $hero-via 65%, $hero-to);
+    overflow: hidden;
+
+    @include respond(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: rem(72px);
+        padding-bottom: rem(72px);
+    }
+
+    &__content {
+        max-width: rem(560px);
+    }
+
+    &__title {
+        font-size: clamp(rem(32px), 8vw, rem(58px));
+        line-height: 1.15;
+        letter-spacing: -1px;
+        animation: slide-in 0.8s var(--ease) both;
+    }
+
+    &__accent {
+        color: $hero-accent;
+    }
+
+    &__text {
+        margin-top: rem(18px);
+        color: $hero-text;
+        animation: slide-in 0.8s 0.15s var(--ease) both;
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(12px);
+        margin-top: rem(24px);
+        animation: slide-in 0.8s 0.3s var(--ease) both;
+    }
+
+    &__aperture {
+        flex-shrink: 0;
+        color: $hero-accent;
+        animation: spin 24s linear infinite;
+
+        @include respond(md) {
+            width: rem(300px);
+            height: rem(300px);
+        }
+
+        @include reduced-motion {
+            animation: none;
+        }
+    }
+}

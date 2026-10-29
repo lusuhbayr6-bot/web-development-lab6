@@ -1,0 +1,74 @@
+$palette: (
+    bg: #f3f5fb,
+    surface: #ffffff,
+    surface-alt: #eae7ff,
+    text: #17213d,
+    muted: #69718c,
+    border: #e3e7f2,
+    brand: #6534ed,
+    brand-2: #a24cff,
+    header-bg: #090d24,
+    header-text: #ffffff,
+    focus: #ffb703
+);
+
+$palette-dark: (
+    bg: #0c1024,
+    surface: #151a38,
+    surface-alt: #10142e,
+    text: #e8eaf6,
+    muted: #aab0cf,
+    border: #272c52,
+    header-bg: #060818
+);
+
+$shadows-light: (
+    shadow: 0 8px 24px rgba(23, 33, 61, 0.08),
+    shadow-hover: 0 18px 36px rgba(101, 52, 237, 0.25)
+);
+
+$shadows-dark: (
+    shadow: 0 8px 24px rgba(0, 0, 0, 0.45),
+    shadow-hover: 0 18px 36px rgba(162, 76, 255, 0.3)
+);
+
+$breakpoints: (
+    sm: 600px,
+    md: 900px
+);
+
+$radius: 16px;
+$space: 1rem;
+$dur: 0.35s;
+$ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+$container: 1100px;
+
+$spacers: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 1rem,
+    4: 1.5rem,
+    5: 3rem
+);
+
+$white: #ffffff;
+$black: #000000;
+$header-line: #252747;
+$nav-text: #c4c8dc;
+$nav-preview: #ffdc79;
+$logo-accent: #a875ff;
+$toggle-border: #8657ff;
+$hero-accent: #b48aff;
+$hero-text: #c8cce0;
+$hero-from: #090d24;
+$hero-via: #17133d;
+$hero-to: #321b67;
+$hero-glow: #4d248f;
+$outline-border: #7d82a5;
+$btn-glow: rgba(113, 60, 240, 0.45);
+$flip-from: #5931c8;
+$flip-to: #31216f;
+$flip-text: #e3dcff;
+$footer-text: #c2c7dd;
+$link-dark: #c4a6ff;

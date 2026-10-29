@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8px);
+    font-size: rem(22px);
+    font-weight: 800;
+
+    &__icon,
+    &__accent {
+        color: $logo-accent;
+    }
+
+    &--footer {
+        color: $white;
+        font-size: rem(18px);
+    }
+}

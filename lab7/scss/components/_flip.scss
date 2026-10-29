@@ -1,0 +1,83 @@
+@use "../abstracts" as *;
+
+.flip-grid {
+    @include container;
+    @include card-grid(rem(22px));
+}
+
+.flip {
+    height: rem(320px);
+    perspective: 1000px;
+    animation: fade-up 0.7s var(--ease) both;
+    animation-delay: calc(var(--i) * 150ms);
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s var(--ease);
+    }
+
+    &--flipped &__inner {
+        transform: rotateY(180deg);
+    }
+
+    &__face {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border-radius: var(--radius);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        box-shadow: var(--shadow);
+
+        &--back {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: rem(10px);
+            padding: rem(24px);
+            background: linear-gradient(145deg, $flip-from, $flip-to);
+            color: $white;
+            transform: rotateY(180deg);
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: rem(22px);
+    }
+
+    &__text {
+        color: $flip-text;
+    }
+
+    &__btn {
+        align-self: flex-start;
+        padding: rem(10px) rem(18px);
+        border: 0;
+        border-radius: rem(25px);
+        background: $white;
+        color: contrast($white, $white, $flip-to);
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s var(--ease), background 0.2s;
+
+        &:hover {
+            transform: scale(1.06);
+            background: $nav-preview;
+        }
+    }
+
+    &__face--front &__btn {
+        position: absolute;
+        left: rem(16px);
+        bottom: rem(16px);
+    }
+}

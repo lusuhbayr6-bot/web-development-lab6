@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:color";
+@use "tokens" as *;
+
+@function rem($px, $base: 16px) {
+    @return math.div($px, $base) * 1rem;
+}
+
+@function palette($name) {
+    @if not map.has-key($palette, $name) {
+        @error "Unknown palette color `#{$name}`.";
+    }
+    @return map.get($palette, $name);
+}
+
+@function channel-value($value) {
+    $v: math.div($value, 255);
+    @if $v <= 0.03928 {
+        @return math.div($v, 12.92);
+    }
+    @return math.pow(math.div($v + 0.055, 1.055), 2.4);
+}
+
+@function luminance($c) {
+    $r: channel-value(color.channel($c, "red", $space: rgb));
+    $g: channel-value(color.channel($c, "green", $space: rgb));
+    $b: channel-value(color.channel($c, "blue", $space: rgb));
+    @return 0.2126 * $r + 0.7152 * $g + 0.0722 * $b;
+}
+
+@function contrast-ratio($a, $b) {
+    $la: luminance($a);
+    $lb: luminance($b);
+    @if $la < $lb {
+        $tmp: $la;
+        $la: $lb;
+        $lb: $tmp;
+    }
+    @return math.div($la + 0.05, $lb + 0.05);
+}
+
+@function contrast($background, $light: $white, $dark: #17213d) {
+    @if contrast-ratio($background, $light) >= contrast-ratio($background, $dark) {
+        @return $light;
+    }
+    @return $dark;
+}

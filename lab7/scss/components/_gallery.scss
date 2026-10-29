@@ -1,0 +1,70 @@
+@use "../abstracts" as *;
+
+.gallery {
+    @include container;
+    @include card-grid(rem(18px));
+
+    &__item {
+        animation: fade-up 0.7s var(--ease) both;
+        animation-delay: calc(var(--i) * 120ms);
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        transition: transform var(--dur) var(--ease), box-shadow var(--dur);
+
+        &:hover,
+        &:focus-visible {
+            transform: translateY(-8px) rotate(-1deg) scale(1.02);
+            box-shadow: var(--shadow-hover);
+
+            .gallery__img {
+                transform: scale(1.1);
+            }
+
+            .gallery__caption {
+                transform: translateY(0);
+            }
+        }
+
+        @include reduced-motion {
+            &:hover,
+            &:focus-visible {
+                transform: none;
+
+                .gallery__img {
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        transition: transform 0.6s var(--ease);
+    }
+
+    &__caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: rem(28px) rem(16px) rem(14px);
+        color: $white;
+        font-weight: bold;
+        background: linear-gradient(transparent, rgba($black, 0.7));
+        transform: translateY(100%);
+        transition: transform var(--dur) var(--ease);
+
+        @media (hover: none) {
+            transform: translateY(0);
+        }
+    }
+}

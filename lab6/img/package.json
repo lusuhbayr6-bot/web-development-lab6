@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPortal | Лаб 7 - Технологийн цомог</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#gallery" class="skip-link">Үндсэн агуулга руу очих</a>
+
+    <header class="header" id="home">
+        <a href="#home" class="logo">
+            <svg class="logo__icon" viewBox="0 0 24 24" width="26" height="26" role="img" aria-labelledby="logo-title">
+                <title id="logo-title">TechPortal лого</title>
+                <path d="M12 2l9 10-9 10-9-10z" fill="currentColor"/>
+            </svg>
+            Tech<span class="logo__accent">Portal</span>
+        </a>
+
+        <nav class="nav" aria-label="Үндсэн цэс">
+            <a href="#home" class="nav__link nav__link--active">Нүүр</a>
+            <a class="nav__link" href="#gallery">Цомог</a>
+            <a class="nav__link" href="#flip">Түүх</a>
+            <a class="nav__link" href="#video">Видео</a>
+            <a class="nav__link" href="#map">Байршил</a>
+            <a class="nav__link" href="https://github.com/lusuhbayr6-bot/web-development-lab5" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="preview.html" class="nav__link nav__link--preview">Төхөөрөмжөөр үзэх</a>
+        </nav>
+
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+            <span class="theme-toggle__label">Харанхуй горим</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Технологийн цомог,<br><span class="hero__accent">зургаар сур.</span></h1>
+                <p class="hero__text">
+                    Вэб хөгжүүлэлт, дизайн, дижитал маркетинг, сүлжээ зэрэг
+                    технологийн чиглэлүүдтэй зургаар танилцаарай.
+                </p>
+                <div class="hero__actions">
+                    <a href="#gallery" class="btn btn--primary">Цомог үзэх</a>
+                    <a href="#video" class="btn btn--outline">Видео үзэх</a>
+                </div>
+            </div>
+
+            <svg class="hero__aperture" viewBox="0 0 200 200" width="220" height="220" aria-hidden="true" focusable="false">
+                <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="4" opacity=".5"/>
+                <g fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round">
+                    <path d="M100 8 L140 78 L60 78 Z" transform="rotate(0 100 100)"/>
+                    <path d="M100 8 L140 78 L60 78 Z" transform="rotate(60 100 100)"/>
+                    <path d="M100 8 L140 78 L60 78 Z" transform="rotate(120 100 100)"/>
+                    <path d="M100 8 L140 78 L60 78 Z" transform="rotate(180 100 100)"/>
+                    <path d="M100 8 L140 78 L60 78 Z" transform="rotate(240 100 100)"/>
+                    <path d="M100 8 L140 78 L60 78 Z" transform="rotate(300 100 100)"/>
+                </g>
+                <circle cx="100" cy="100" r="16" fill="currentColor"/>
+            </svg>
+        </section>
+
+        <section class="section" id="gallery" aria-labelledby="gallery-title">
+            <div class="section__heading">
+                <h2 class="section__title" id="gallery-title">Технологийн цомог</h2>
+                <p class="section__text">Зураг дээр хулганаа аваачих эсвэл Tab товчоор сонгоход том болж гэрэлтэнэ.</p>
+            </div>
+
+            <ul class="gallery">
+                <li class="gallery__item" style="--i:0">
+                    <a class="gallery__link" href="img/photo1.jpg">
+                        <img class="gallery__img" src="img/photo1.jpg" alt="AI eBook Creator-ийн зураг" width="800" height="600" loading="lazy">
+                        <span class="gallery__caption">AI eBook Creator</span>
+                    </a>
+                </li>
+                <li class="gallery__item" style="--i:1">
+                    <a class="gallery__link" href="img/photo2.jpg">
+                        <img class="gallery__img" src="img/photo2.jpg" alt="Дижитал маркетингийн зураг" width="800" height="600" loading="lazy">
+                        <span class="gallery__caption">Дижитал маркетинг</span>
+                    </a>
+                </li>
+                <li class="gallery__item" style="--i:2">
+                    <a class="gallery__link" href="img/photo3.jpg">
+                        <img class="gallery__img" src="img/photo3.jpg" alt="Дэлхийн сүлжээний холболтын зураг" width="800" height="600" loading="lazy">
+                        <span class="gallery__caption">Дэлхийн сүлжээ</span>
+                    </a>
+                </li>
+                <li class="gallery__item" style="--i:3">
+                    <a class="gallery__link" href="img/photo4.jpg">
+                        <img class="gallery__img" src="img/photo4.jpg" alt="Дизайнерын ажлын зураг" width="800" height="600" loading="lazy">
+                        <span class="gallery__caption">Дизайн</span>
+                    </a>
+                </li>
+                <li class="gallery__item" style="--i:4">
+                    <a class="gallery__link" href="img/photo5.jpg">
+                        <img class="gallery__img" src="img/photo5.jpg" alt="Вэб хөгжүүлэлтийн зураг" width="800" height="600" loading="lazy">
+                        <span class="gallery__caption">Вэб хөгжүүлэлт</span>
+                    </a>
+                </li>
+                <li class="gallery__item" style="--i:5">
+                    <a class="gallery__link" href="img/photo6.jpg">
+                        <img class="gallery__img" src="img/photo6.jpg" alt="Утасгүй технологийн ирээдүйн зураг" width="800" height="600" loading="lazy">
+                        <span class="gallery__caption">Утасгүй ирээдүй</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section section--alt" id="flip" aria-labelledby="flip-title">
+            <div class="section__heading">
+                <h2 class="section__title" id="flip-title">Чиглэл бүрийн тухай</h2>
+                <p class="section__text">"Эргүүлэх" товчийг дарж картын ар талыг харна уу.</p>
+            </div>
+
+            <div class="flip-grid">
+                <div class="flip" style="--i:0">
+                    <div class="flip__inner">
+                        <div class="flip__face flip__face--front">
+                            <img class="flip__image" src="img/photo1.jpg" alt="AI eBook Creator" width="800" height="600" loading="lazy">
+                            <button type="button" class="flip__btn">Эргүүлэх</button>
+                        </div>
+                        <div class="flip__face flip__face--back">
+                            <h3 class="flip__title">AI eBook Creator</h3>
+                            <p class="flip__text">AI хэрэгслээр цахим ном бэлтгэх, нийтлэх ажлыг хурдан, хялбар болгодог.</p>
+                            <button type="button" class="flip__btn">Буцах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip" style="--i:1">
+                    <div class="flip__inner">
+                        <div class="flip__face flip__face--front">
+                            <img class="flip__image" src="img/photo3.jpg" alt="Дэлхийн сүлжээ" width="800" height="600" loading="lazy">
+                            <button type="button" class="flip__btn">Эргүүлэх</button>
+                        </div>
+                        <div class="flip__face flip__face--back">
+                            <h3 class="flip__title">Дэлхийн сүлжээ</h3>
+                            <p class="flip__text">Дэлхийн өнцөг булан бүрийн төхөөрөмжүүдийг интернетээр холбодог сүлжээний ойлголт.</p>
+                            <button type="button" class="flip__btn">Буцах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip" style="--i:2">
+                    <div class="flip__inner">
+                        <div class="flip__face flip__face--front">
+                            <img class="flip__image" src="img/photo6.jpg" alt="Утасгүй ирээдүй" width="800" height="600" loading="lazy">
+                            <button type="button" class="flip__btn">Эргүүлэх</button>
+                        </div>
+                        <div class="flip__face flip__face--back">
+                            <h3 class="flip__title">Утасгүй ирээдүй</h3>
+                            <p class="flip__text">Утасгүй технологи бидний амьдрал, ажлыг холбох ирээдүйн чиглэлийг тодорхойлно.</p>
+                            <button type="button" class="flip__btn">Буцах</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="video" aria-labelledby="video-title">
+            <div class="section__heading">
+                <h2 class="section__title" id="video-title">Технологийн танилцуулга видео</h2>
+                <p class="section__text">Монгол хадмал орчуулгатай. Хадмалыг тоглуулагчийн CC товчоор асаана.</p>
+            </div>
+
+            <video class="video" controls preload="metadata" poster="img/photo2.jpg" width="640" height="360">
+                <source src="video/clip.webm" type="video/webm">
+                <source src="video/clip.mp4" type="video/mp4">
+                <track kind="subtitles" src="video/clip.mn.vtt" srclang="mn" label="Монгол" default>
+                <p>Таны хөтөч видео дэмжихгүй байна. <a href="video/clip.mp4">Видеог татаж авах</a>.</p>
+            </video>
+        </section>
+
+        <section class="section section--alt" id="map" aria-labelledby="map-title">
+            <div class="section__heading">
+                <h2 class="section__title" id="map-title">Байршил</h2>
+                <p class="section__text">Улаанбаатар хотын газрын зураг.</p>
+            </div>
+
+            <div class="map">
+                <iframe class="map__iframe"
+                    title="Улаанбаатар хотын газрын зураг"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=106.80%2C47.87%2C107.02%2C47.96&amp;layer=mapnik"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    sandbox="allow-scripts allow-same-origin"></iframe>
+            </div>
+            <p class="map__link"><a class="map__anchor" href="https://www.openstreetmap.org/#map=12/47.9184/106.9177" target="_blank" rel="noopener noreferrer">Газрын зургийг том хэмжээгээр нээх</a></p>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <a href="#home" class="logo logo--footer">Tech<span class="logo__accent">Portal</span></a>
+        <p>Лаб 6 · CSS3 animation, transform, custom properties</p>
+        <span>© 2026 TechPortal</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+
+:root {
+    @include theme-vars($palette, $shadows-light);
+    --radius: #{$radius};
+    --space: #{$space};
+    --dur: #{$dur};
+    --ease: #{$ease};
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    @include theme-vars($palette-dark, $shadows-dark);
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        @include theme-vars($palette-dark, $shadows-dark);
+        color-scheme: dark;
+    }
+}

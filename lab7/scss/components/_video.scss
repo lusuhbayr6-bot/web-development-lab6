@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.video {
+    width: 100%;
+    @include container(rem(800px));
+    border-radius: var(--radius);
+    background: $black;
+    box-shadow: var(--shadow);
+}
